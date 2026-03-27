@@ -214,6 +214,16 @@ function toggleProjects() {
   btn.textContent = expanded ? 'View Less ↑' : 'View More ↓';
 }
 
+// ── VIEW MORE / LESS GALLERY ──────────────────────────────────
+let galleryExpanded = false;
+function toggleGallery() {
+  const extra = document.querySelectorAll('.gallery-extra');
+  const btn   = document.getElementById('galleryToggleBtn');
+  galleryExpanded = !galleryExpanded;
+  extra.forEach(el => { el.style.display = galleryExpanded ? 'block' : 'none'; });
+  btn.textContent = galleryExpanded ? 'View Less ↑' : 'View More ↓';
+}
+
 
 // ── UNIFIED LIGHTBOX ─────────────────────────────────────────
 // Handles: local video (.mp4), YouTube embed, local image, certificate image
