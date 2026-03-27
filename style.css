@@ -373,7 +373,21 @@ footer span{color:var(--blue);}
   .projects-grid{grid-template-columns:1fr;}
 
   /* Gallery */
-  .marquee-item{width:200px;height:125px;}
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 images per row */
+    gap: 0.7rem;
+  }
+
+
+  .marquee-item {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* keeps nice proportions */
+  }
+
+
 
   /* Education */
   .edu-grid{grid-template-columns:1fr;}
