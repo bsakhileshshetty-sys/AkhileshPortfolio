@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akhilesh B S | Unreal Engine Developer</title>
+<!-- ── FAVICON ── -->
+<!-- SVG favicon: works on all modern browsers — glowing diamond with "AB" initials -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23020408'/><polygon points='16,3 29,16 16,29 3,16' fill='none' stroke='%2300c3ff' stroke-width='1.5'/><polygon points='16,7 25,16 16,25 7,16' fill='%23060d14' stroke='%2300c3ff' stroke-width='0.8' opacity='0.6'/><text x='16' y='20' font-family='monospace' font-weight='900' font-size='9' fill='%2300c3ff' text-anchor='middle'>AB</text></svg>"/>
+<!-- PNG fallback for older browsers -->
+<link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVFhH7ZZBCsAgDATz/09boQeRJi4xICzOwxMdkl0AAAD+pZQ651xKKSilVEopVQhhjDHWWhtCCM45Z621IYTgnHPWWhtCCM45Z621IYTgnHPWWhtCCM45Z621IYTgnHPWWhtCCM45Z621IYTgnHPWWhtCCM45Z621AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3gAAAABJRU5ErkJggg=="/>
+<!-- Apple touch icon -->
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%23020408'/><polygon points='90,18 162,90 90,162 18,90' fill='none' stroke='%2300c3ff' stroke-width='8'/><polygon points='90,42 138,90 90,138 42,90' fill='%23060d14' stroke='%2300c3ff' stroke-width='4' opacity='0.5'/><text x='90' y='108' font-family='monospace' font-weight='900' font-size='52' fill='%2300c3ff' text-anchor='middle'>AB</text></svg>"/>
+<!-- Browser tab theme color -->
+<meta name="theme-color" content="#020408"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">AKHIL<span>//</span>UEDEV</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeNav()">Overview</a></li>
+    <li><a href="#whatido" onclick="closeNav()">Expertise</a></li>
+    <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+    <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+    <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+    <li><a href="#gallery" onclick="closeNav()">Showcase</a></li>
+    <li><a href="#education" onclick="closeNav()">Education</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="assets/Akhilesh B S.pdf" target="_blank">Resume ↗</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-line"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Building Real-time Systems with Unreal Engine (C++ · APIs · XR)</div>
+    <h1 class="hero-name">Akhilesh <span class="accent">B S</span></h1>
+    <div class="hero-role"><span id="typed-text"></span></div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="2.5+">0</span>
+        <div class="hero-stat-label">Years XP</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="6">0</span>
+        <div class="hero-stat-label">Projects Delivered</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="2">0</span>
+        <div class="hero-stat-label">Organizations</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="100%">0</span>
+        <div class="hero-stat-label">Committed</div>
+      </div>
+    </div>
+    <div class="tag-strip">
+      <div class="tag-strip-inner">
+        <span class="tag-pill">Unreal Engine 5</span>
+        <span class="tag-pill org">XR Simulation</span>
+        <span class="tag-pill">Digital Twin Systems</span>
+        <span class="tag-pill org">Real-time 3D</span>
+        <span class="tag-pill">C++ Development</span>
+        <span class="tag-pill org">Blueprint Systems</span>
+        <span class="tag-pill">UI Systems (UMG)</span>
+        <span class="tag-pill org">PCG (Procedural Generation)</span>
+        <span class="tag-pill">Flight Simulation</span>
+        <span class="tag-pill org">JSBSim Integration</span>
+        <span class="tag-pill">AR / VR / MR</span>
+        <span class="tag-pill org">Pixel Streaming</span>
+        <span class="tag-pill">API Integration (REST/JSON)</span>
+        <span class="tag-pill org">Real-time Data Sync</span>
+        <span class="tag-pill">Google Sheets Integration</span>
+        <span class="tag-pill org">Inventory Systems</span>
+        <span class="tag-pill">Performance Optimization</span>
+        <!-- duplicate for seamless loop -->
+        <span class="tag-pill">Unreal Engine 5</span>
+        <span class="tag-pill org">XR Simulation</span>
+        <span class="tag-pill">Digital Twin Systems</span>
+        <span class="tag-pill org">Real-time 3D</span>
+        <span class="tag-pill">C++ Development</span>
+        <span class="tag-pill org">Blueprint Systems</span>
+        <span class="tag-pill">UI Systems (UMG)</span>
+        <span class="tag-pill org">PCG (Procedural Generation)</span>
+        <span class="tag-pill">Flight Simulation</span>
+        <span class="tag-pill org">JSBSim Integration</span>
+        <span class="tag-pill">AR / VR / MR</span>
+        <span class="tag-pill org">Pixel Streaming</span>
+        <span class="tag-pill">API Integration (REST/JSON)</span>
+        <span class="tag-pill org">Real-time Data Sync</span>
+        <span class="tag-pill">Google Sheets Integration</span>
+        <span class="tag-pill org">Inventory Systems</span>
+        <span class="tag-pill">Performance Optimization</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#projects">View Projects</a>
+      <a class="btn-outline" href="#contact">Hire Me</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">01 // Overview</div>
+    <h2 class="section-title">About <span class="hl">Me</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-frame">
+          <img src="assets/images/Akhil.jpeg" alt="Akhilesh B S"
+            onload="this.style.display='block'"
+            onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex'"/>
+          <div id="photo-fallback" class="photo-fallback">
+            <div style="font-size:4rem;opacity:.2;">👤</div>
+          </div>
+          <div class="about-badge b1"><span class="num">2.5+</span><span class="lbl">Experience</span></div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p>Hi, I'm <strong>Akhilesh B S</strong> — an <strong>XR Simulation &amp; Digital Twin Engineer</strong> specializing in building real-time systems using Unreal Engine (C++ &amp; Blueprints).</p>
+        <p>With <strong>2.5+ years of hands-on experience</strong>, I have worked on <strong>flight simulation, digital twin platforms, and XR applications</strong>, focusing on performance, scalability, and real-world integration.</p>
+        <p>My work involves <strong>real-time data systems</strong> including API integration, UDP-based data flow, and <strong>live updates using Google Sheets</strong> for dynamic inventory and visualization systems. I also build <strong>interactive UI systems (UMG)</strong> and leverage <strong>procedural generation (PCG)</strong> for large-scale environments.</p>
+       <div class="competency-section">
+  <div class="passion-title">// Core Expertise</div>
+
+<div class="competency-grid-3">
+
+  <!-- TOP ROW (BLUE) -->
+  <div class="comp-card primary">
+    <div class="comp-name">Unreal Engine 5</div>
+    <div class="comp-meta">C++ · Blueprints</div>
+  </div>
+
+  <div class="comp-card primary">
+    <div class="comp-name">XR Simulation Systems</div>
+    <div class="comp-meta">VR · AR · MR</div>
+  </div>
+
+  <div class="comp-card primary">
+    <div class="comp-name">Digital Twin Platforms</div>
+    <div class="comp-meta">Architectural · Industrial</div>
+  </div>
+
+  <!-- BOTTOM ROW (ORANGE) -->
+  <div class="comp-card secondary">
+    <div class="comp-name">Real-time Data Integration</div>
+    <div class="comp-meta">REST · UDP · JSON</div>
+  </div>
+
+  <div class="comp-card secondary">
+    <div class="comp-name">Flight Simulation</div>
+    <div class="comp-meta">JSBSim · HUD Systems</div>
+  </div>
+
+  <div class="comp-card secondary">
+    <div class="comp-name">Procedural Systems (PCG)</div>
+    <div class="comp-meta">Large-scale Environments</div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="whatido">
+  <div class="container">
+    <div class="section-label">02 // Expertise</div>
+    <h2 class="section-title">What I <span class="hl">Do</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="whatido-grid">
+      <div class="whatido-card reveal">
+        <span class="wi-icon">🧠</span>
+        <div class="wi-title">XR Simulation Systems</div>
+        <p class="wi-desc">Build real-time simulation systems using Unreal Engine with C++ and Blueprints, focusing on performance, scalability, and engineering-grade accuracy.</p>
+        <div class="wi-tags"><span class="wi-tag">Unreal Engine 5</span><span class="wi-tag">C++</span><span class="wi-tag">Blueprints</span></div>
+      </div>
+      <div class="whatido-card reveal">
+        <span class="wi-icon">✈️</span>
+        <div class="wi-title">Flight Simulation</div>
+        <p class="wi-desc">Developed flight simulators integrating JSBSim physics, real-time data via UDP, and aircraft systems with accurate motion and control logic.</p>
+        <div class="wi-tags"><span class="wi-tag">JSBSim</span><span class="wi-tag">UDP</span><span class="wi-tag">Simulation</span></div>
+      </div>
+      <div class="whatido-card reveal">
+        <span class="wi-icon">🏢</span>
+        <div class="wi-title">Digital Twin Platforms</div>
+        <p class="wi-desc">Built interactive real estate digital twins with real-time inventory tracking showing flat availability (booked/available) using APIs and Google Sheets.</p>
+        <div class="wi-tags"><span class="wi-tag">Digital Twin</span><span class="wi-tag">APIs</span><span class="wi-tag">Real-time Inventory</span></div>
+      </div>
+      <div class="whatido-card reveal">
+        <span class="wi-icon">📡</span>
+        <div class="wi-title">Real-Time Data Integration</div>
+        <p class="wi-desc">Integrated live data pipelines using REST APIs, JSON, and UDP streams to drive dynamic simulation environments and real-time system updates.</p>
+        <div class="wi-tags"><span class="wi-tag">REST APIs</span><span class="wi-tag">JSON</span><span class="wi-tag">Data Sync</span></div>
+      </div>
+      <div class="whatido-card reveal">
+        <span class="wi-icon">🖥️</span>
+        <div class="wi-title">Interactive UI Systems</div>
+        <p class="wi-desc">Designed and developed responsive UI systems using UMG for dashboards, controls, and real-time interaction within simulation environments.</p>
+        <div class="wi-tags"><span class="wi-tag">UMG</span><span class="wi-tag">UI/UX</span><span class="wi-tag">Interaction</span></div>
+      </div>
+      <div class="whatido-card reveal">
+        <span class="wi-icon">⚙️</span>
+        <div class="wi-title">Procedural &amp; Runtime Systems</div>
+        <p class="wi-desc">Built runtime tools and procedural systems (PCG) for large-scale environments, including editing tools, save/load systems, and performance optimization.</p>
+        <div class="wi-tags"><span class="wi-tag">PCG</span><span class="wi-tag">Runtime Tools</span><span class="wi-tag">Optimization</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">03 // Experience</div>
+    <h2 class="section-title">Work <span class="hl">Experience</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="exp-timeline">
+
+      <!-- CREDVEST -->
+      <div class="exp-card reveal" style="border-color:rgba(255,107,0,0.35);">
+        <div class="hud-corner tl"></div><div class="hud-corner br"></div>
+        <div class="exp-header">
+          <div class="exp-role">Unreal Engine Developer <span class="current-badge">Current</span></div>
+          <div class="exp-period">Oct 2025 – Present</div>
+        </div>
+        <div class="exp-company">// Credvest · Full-time</div>
+        <p class="exp-desc">Developing advanced real-time <strong>Digital Twin</strong> and <strong>Architectural Visualization</strong> applications using Unreal Engine. Building immersive VR-supported walkthrough systems with high-performance rendering, scalable UI frameworks, and real-time data integration for smart real estate solutions.</p>
+        <p class="exp-desc">Engineered production-level systems including <strong>pro-level Blueprint &amp; C++ architectures</strong>, optimized application performance for desktop and Android, and created modular tools for rapid deployment across multiple projects.</p>
+        <p class="exp-desc">Implemented <strong>real-time inventory systems</strong> connected with Google Sheets/CSV online data, enabling live property availability tracking.</p>
+        <p class="exp-desc">Developed a reusable <strong>analytics plugin</strong> to capture user behavior including session duration, interactions, and button clicks. The system stores structured data in JSON format and is designed for seamless integration across multiple Unreal projects.</p>
+        <p class="exp-desc">Built <strong>weather-driven digital twins</strong> using live API data and historical datasets, allowing dynamic environment simulation. Delivered cross-platform builds including <strong>Android deployments</strong>.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Unreal Engine</span><span class="exp-tag">C++</span>
+          <span class="exp-tag">Blueprints (Advanced)</span><span class="exp-tag">Digital Twin</span>
+          <span class="exp-tag">Architectural Viz</span><span class="exp-tag">VR/XR</span>
+          <span class="exp-tag">UI/UX Systems</span><span class="exp-tag">Animation Systems</span>
+          <span class="exp-tag">Optimization</span><span class="exp-tag">Google Sheets API</span>
+          <span class="exp-tag">JSON Analytics</span><span class="exp-tag">Weather API</span>
+          <span class="exp-tag">Android Build</span>
+        </div>
+      </div>
+
+      <!-- LTX JUNIOR -->
+      <div class="exp-card reveal">
+        <div class="hud-corner tl"></div><div class="hud-corner br"></div>
+        <div class="exp-header">
+          <div class="exp-role">Junior Unreal Engine Developer</div>
+          <div class="exp-period">Sep 2024 – Oct 2025 · 1.2 yr</div>
+        </div>
+        <div class="exp-company">// LTX — LaunchTrax · Full-time</div>
+        <p class="exp-desc">Worked on advanced <strong>flight simulation systems</strong> using JSBSim, developing realistic aircraft behavior, environment setup, and full simulation workflows including carrier-based operations and mission scenarios.</p>
+        <p class="exp-desc">Built large-scale procedural environments using <strong>latitude/longitude data</strong> to auto-generate buildings, roads, and vegetation, combined with real-time terrain generation and dynamic weather systems including day/night cycles, rain, and snow.</p>
+        <p class="exp-desc">Developed aircraft systems including <strong>model rigging, flight animations, cockpit UI integration, and custom HUDs</strong> for multiple aircraft types, ensuring accuracy and performance across simulations.</p>
+        <p class="exp-desc">Implemented <strong>real-time networking</strong> using UDP communication and contributed to VRPN-based integrations for Unreal Engine and Unity, supporting synchronized simulation data across systems.</p>
+        <p class="exp-desc">Delivered optimized, cross-platform applications with support for <strong>VR devices (Meta, Varjo)</strong>, including dogfight simulations, missile systems, multiplayer environments, and carrier landing operations.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Flight Simulation</span><span class="exp-tag">JSBSim</span>
+          <span class="exp-tag">Procedural Generation</span><span class="exp-tag">Geo-Spatial Data</span>
+          <span class="exp-tag">HUD Systems</span><span class="exp-tag">VR (Meta, Varjo)</span>
+          <span class="exp-tag">Multiplayer</span><span class="exp-tag">UDP Networking</span>
+          <span class="exp-tag">VRPN</span><span class="exp-tag">Environment Systems</span>
+          <span class="exp-tag">Optimization</span>
+        </div>
+      </div>
+
+      <!-- LTX INTERN -->
+      <div class="exp-card reveal">
+        <div class="hud-corner tl"></div><div class="hud-corner br"></div>
+        <div class="exp-header">
+          <div class="exp-role">Game Developer — Internship</div>
+          <div class="exp-period">Jul 2024 – Aug 2024 · 2 mos</div>
+        </div>
+        <div class="exp-company">// LTX — LaunchTrax</div>
+        <p class="exp-desc">Kickstarted development with Lama helicopter HUDs and initial flight simulation systems using JSBSim. Converted JSBSim into a reusable Unreal plugin for easy integration across projects. Delivered strong early contributions, leading to a full-time offer in a short time.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Rapid Prototyping</span><span class="exp-tag">System Design</span>
+          <span class="exp-tag">Performance Optimization</span><span class="exp-tag">Reusable Tools</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div id="skills-three-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-label">04 // Technical Skills</div>
+    <h2 class="section-title">Tech <span class="hl">Skills</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+
+    <div class="skills-pro-grid">
+
+      <!-- CATEGORY 1: Core Expertise -->
+      <div class="skill-cat-card reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">⬡</span>
+          <div class="skill-cat-title">Core Expertise</div>
+          <div class="skill-cat-sub">  Real-time systems, simulation, and scalable architecture</div>
+        </div>
+        <div class="skill-pro-list">
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" alt="UE"/>
+            <div class="spi-info"><div class="spi-name">Unreal Engine 5</div><div class="spi-tags"><span>C++</span><span>Blueprints</span><span>Level Design</span></div></div>
+            <div class="spi-badge expert">Expert</div>
+          </div>
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
+            <div class="spi-info"><div class="spi-name">C++ Programming</div><div class="spi-tags"><span>Gameplay Systems</span><span>Optimization</span><span>Plugin Dev</span></div></div>
+            <div class="spi-badge expert">Expert</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">DT</div>
+            <div class="spi-info"><div class="spi-name">Digital Twin Systems</div><div class="spi-tags"><span>Architectural Viz</span><span>Live Data</span><span>VR Walkthroughs</span></div></div>
+            <div class="spi-badge expert">Expert</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">XR</div>
+            <div class="spi-info"><div class="spi-name">XR Development</div><div class="spi-tags"><span>VR</span><span>AR</span><span>MR</span><span>Meta · Varjo</span></div></div>
+            <div class="spi-badge expert">Expert</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">FS</div>
+            <div class="spi-info"><div class="spi-name">Flight Simulation</div><div class="spi-tags"><span>JSBSim</span><span>HUD Systems</span><span>Aircraft Rigging</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 2: Systems & Integration -->
+      <div class="skill-cat-card reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">⬡</span>
+          <div class="skill-cat-title">Systems &amp; Integration</div>
+          <div class="skill-cat-sub">Data pipelines &amp; runtime systems</div>
+        </div>
+        <div class="skill-pro-list">
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">API</div>
+            <div class="spi-info"><div class="spi-name">Real-time Data Integration</div><div class="spi-tags"><span>REST APIs</span><span>JSON</span><span>Google Sheets</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://img.icons8.com/color/96/networking-manager.png" alt="Net"/>
+            <div class="spi-info"><div class="spi-name">Networking &amp; UDP</div><div class="spi-tags"><span>UDP/TCP</span><span>Multiplayer</span><span>VRPN</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">PCG</div>
+            <div class="spi-info"><div class="spi-name">Procedural Generation</div><div class="spi-tags"><span>PCG Framework</span><span>Geo-Spatial</span><span>Lat/Long</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">UI</div>
+            <div class="spi-info"><div class="spi-name">UI Systems (UMG)</div><div class="spi-tags"><span>UMG</span><span>Dashboards</span><span>Interaction Design</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">PS</div>
+            <div class="spi-info"><div class="spi-name">Pixel Streaming</div><div class="spi-tags"><span>Cloud Deployment</span><span>Browser XR</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 3: Tools & Platforms -->
+      <div class="skill-cat-card reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">⬡</span>
+          <div class="skill-cat-title">Tools &amp; Platforms</div>
+          <div class="skill-cat-sub">Supporting technologies</div>
+        </div>
+        <div class="skill-pro-list">
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity"/>
+            <div class="spi-info"><div class="spi-name">Unity Engine</div><div class="spi-tags"><span>C#</span><span>XR Prototyping</span></div></div>
+            <div class="spi-badge intermediate">Intermediate</div>
+          </div>
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+            <div class="spi-info"><div class="spi-name">Git / Version Control</div><div class="spi-tags"><span>GitHub</span><span>Branching</span><span>CI Workflows</span></div></div>
+            <div class="spi-badge advanced">Advanced</div>
+          </div>
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender"/>
+            <div class="spi-info"><div class="spi-name">Blender / 3D Assets</div><div class="spi-tags"><span>Modeling</span><span>Rigging</span><span>Asset Pipeline</span></div></div>
+            <div class="spi-badge intermediate">Intermediate</div>
+          </div>
+          <div class="skill-pro-item">
+            <img class="spi-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+            <div class="spi-info"><div class="spi-name">Python / Scripting</div><div class="spi-tags"><span>Automation</span><span>Data Processing</span></div></div>
+            <div class="spi-badge intermediate">Intermediate</div>
+          </div>
+          <div class="skill-pro-item">
+            <div class="spi-icon-txt">AND</div>
+            <div class="spi-info"><div class="spi-name">Android / Cross-platform</div><div class="spi-tags"><span>Android Builds</span><span>ARCore</span><span>Perf. Opt.</span></div></div>
+            <div class="spi-badge intermediate">Intermediate</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Keyword Cloud -->
+    <div class="skill-keyword-row reveal">
+      <div class="skill-kw">JSBSim</div>
+      <div class="skill-kw org">UDP / TCP</div>
+      <div class="skill-kw">Blueprint Architecture</div>
+      <div class="skill-kw org">UMG UI</div>
+      <div class="skill-kw">REST APIs</div>
+      <div class="skill-kw org">Google Sheets API</div>
+      <div class="skill-kw">Real-time Data Sync</div>
+      <div class="skill-kw org">Inventory Systems</div>
+      <div class="skill-kw">PCG Framework</div>
+      <div class="skill-kw org">Geo-Spatial Data</div>
+      <div class="skill-kw">Pixel Streaming</div>
+      <div class="skill-kw org">JSON Analytics</div>
+      <div class="skill-kw">Performance Optimization</div>
+      <div class="skill-kw org">XR · AR/VR/MR</div>
+      <div class="skill-kw">Plugin Development</div>
+      <div class="skill-kw org">Weather API</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">05 // Projects</div>
+    <h2 class="section-title">Featured <span class="hl">Projects</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/CarVideo.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Iceland A 02.png" alt="P1" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+         <div class="proj-badge">UE5 · Cinematics</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 01</div>
+          <div class="project-title">🚗 Automotive Showcase 4K Cinematic Rendering</div>
+          <p class="project-desc">
+          Highfidelity automotive visualization created in Unreal Engine using advanced lighting, materials, and Sequencer-based cinematic workflows for realistic 4K output.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/FlightFollowSpline.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Flight.png" alt="P2" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">UE5 · Simulation</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 02</div>
+          <div class="project-title">✈️ Flight Simulation Spline & CSV Drive</div>
+          <p class="project-desc">Aircraft movement driven by spline paths generated from CSV data, with real-time speed and path control via UI sliders.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/UDP Connection.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Screenshot 2026-03-26 222050.png" alt="P3" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">UDP · Integration</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 03</div>
+          <div class="project-title">📡 Real-Time Data Communication UDP System</div>
+          <p class="project-desc">Created a UDP-based system to send and receive data between applications, with JSON used to store and manage the data.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/XR Interaction.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/image.png" alt="P4" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">XR · Interaction</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 04</div>
+          <div class="project-title">🏥 XR Hospital Interaction System</div>
+          <p class="project-desc">Developed an interactive XR system where doctors can view, manage, and update patient data in real time within an immersive environment.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/TreePark.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/treepark.png" alt="P5" onerror="this.style.display='none'"/>
+
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">Digital Twin · Archviz</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 05</div>
+          <div class="project-title">🏢 Archviz Digital Twin Application</div>
+          <p class="project-desc">Built a complete digital twin application for architectural visualization, enabling real-time interaction, navigation, and dynamic data-driven updates within a 3D environment.
+  </p></p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openMedia('assets/videos/FlightSimulation.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Screenshot 2026-03-26 225136.png" alt="P6" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">Flight Sim · JSBSim</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 06</div>
+          <div class="project-title">✈️ Flight Simulation System  JSBSim Integration</div>
+          <p class="project-desc">Developed a complete flight simulation system using JSBSim, including aircraft rigging, animation, and real-time flight dynamics for accurate simulation behavior.</p>
+        </div>
+      </div>
+
+      <!-- EXTRA PROJECT 07 (hidden by default) -->
+      <div class="project-card reveal extra-project" style="display:none;"
+           onclick="openMedia('assets/videos/Air To Air Missile.MP4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Screenshot 2026-03-26 225643.png" alt="P7" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">Flight Sim · Combat</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 07</div>
+          <div class="project-title">🎯 Air-to-Air Missile Targeting System</div>
+          <p class="project-desc">Implemented an air-to-air missile system with radar-based target detection, automatic enemy tracking, and guided missile firing within a flight simulation environment.
+  </p></p>
+        </div>
+      </div>
+
+            <div class="project-card reveal extra-project" style="display:none;"
+           onclick="openMedia('assets/videos/Unreal Engine Model Pro.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/project5 - frame at 0m3s.jpg" alt="P7" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">Runtime Tools · UE5</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 08</div>
+          <div class="project-title">🛠️ Runtime Modeling Tool Application</div>
+          <p class="project-desc">Created a runtime tool for importing models with undo/redo, duplicate, delete, and save/load features.
+  </p></p>
+        </div>
+      </div>
+
+      
+            <div class="project-card reveal extra-project" style="display:none;"
+           onclick="openMedia('assets/videos/All in one project.mp4','video')">
+        <div class="project-thumb">
+          <img src="assets/Thumbnail/Screenshot 2026-03-25 144109.png" alt="P7" onerror="this.style.display='none'"/>
+          <div class="project-play-overlay"><div class="play-btn"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div><div class="project-play-badge">VIDEO</div>
+          <div class="proj-badge">Showcase · UE5</div>
+        </div>
+        <div class="project-body">
+          <div class="project-num">// Project 09</div>
+          <div class="project-title">🎬 Unreal Engine Showcase Reel</div>
+          <p class="project-desc">A complete showcase of my work in Unreal Engine, including simulation systems, digital twin applications, XR projects, and real-time visualization.
+  </p></p>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <button id="toggleBtn" class="btn-outline" onclick="toggleProjects()">View More ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-label">06 // Captures</div>
+    <h2 class="section-title">Project <span class="hl">Gallery</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- visible by default (first 9) -->
+      <div class="gallery-item" onclick="openCert('assets/images/Iceland A 02.png')">
+        <img src="assets/images/Iceland A 02.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/img3.png')">
+        <img src="assets/images/img3.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/img5.png')">
+        <img src="assets/images/img5.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 124802.png')">
+        <img src="assets/images/Screenshot 2026-03-25 124802.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 124825.png')">
+        <img src="assets/images/Screenshot 2026-03-25 124825.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 124943.png')">
+        <img src="assets/images/Screenshot 2026-03-25 124943.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 124916.png')">
+        <img src="assets/images/Screenshot 2026-03-25 124916.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 144041.png')">
+        <img src="assets/images/Screenshot 2026-03-25 144041.png" alt=""/>
+      </div>
+      <div class="gallery-item" onclick="openCert('assets/images/Screenshot 2026-03-25 124903.png')">
+        <img src="assets/images/Screenshot 2026-03-25 124903.png" alt=""/>
+      </div>
+
+      <!-- hidden by default — shown on View More -->
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/img4.png')">
+        <img src="assets/images/img4.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2026-03-25 144007.png')">
+        <img src="assets/images/Screenshot 2026-03-25 144007.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2026-03-25 125843.png')">
+        <img src="assets/images/Screenshot 2026-03-25 125843.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2026-03-25 144109.png')">
+        <img src="assets/images/Screenshot 2026-03-25 144109.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2026-03-25 144221.png')">
+        <img src="assets/images/Screenshot 2026-03-25 144221.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2025-04-21 1930581.png')">
+        <img src="assets/images/Screenshot 2025-04-21 1930581.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/Screenshot 2025-04-27 174908.png')">
+        <img src="assets/images/Screenshot 2025-04-27 174908.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/img1.png')">
+        <img src="assets/images/img1.png" alt=""/>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openCert('assets/images/img6.png')">
+        <img src="assets/images/img6.png" alt=""/>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2rem;">
+      <button id="galleryToggleBtn" class="btn-outline" onclick="toggleGallery()">View More ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-label">07 // Education</div>
+    <h2 class="section-title">Education &amp; <span class="hl">Certifications</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-degree">B.Tech · Mechanical Engineering</div>
+        <div class="edu-school">SV College of Engineering and Technology</div>
+        <div class="edu-meta"><span class="edu-badge score">85%</span><span class="edu-badge year">2019 – 2022</span></div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Diploma · Mechanical Engineering</div>
+        <div class="edu-school">Kuppam Engineering College</div>
+        <div class="edu-meta"><span class="edu-badge score">68%</span><span class="edu-badge year">2015 – 2019</span></div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;" class="reveal">
+      <h3 class="section-subtitle">// Certifications &amp; Training</h3>
+      <div class="course-card">
+        <div class="course-title">AR/VR Experiences — Ajna Creator</div>
+        <div class="course-provider">// 6-Month Intensive · Certified</div>
+        <p class="course-desc">XR Interaction · Simulation Systems · Digital Twin Development · 3D Environment Creation</p>
+        <button class="cert-btn" onclick="openCert('assets/images/1718775828784.jpg')">View Certificate ↗</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Full Stack Developer — JSpiders</div>
+        <div class="course-provider">// 6-Month Training · Certified</div>
+        <p class="course-desc">Java · HTML · CSS · JavaScript · React · SQL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">08 // Contact</div>
+    <h2 class="section-title">Get In <span class="hl">Touch</span></h2>
+    <div class="hud-divider"><div class="hud-diamond"></div></div>
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+       <p>
+      I am currently seeking opportunities in <strong>XR Simulation, Digital Twin systems, and real-time 3D applications</strong> using Unreal Engine.
+      I focus on building scalable, data-driven systems that combine real-world integration with interactive visualization.
+      If you're looking for someone with strong technical execution and a systems-oriented approach — I’d be glad to connect.
+      </p>
+        <div class="contact-links">
+          <a class="contact-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=bsakhileshshetty@gmail.com" target="_blank">
+            <div class="contact-link-icon">✉</div>
+            <div class="contact-link-text"><span class="contact-link-lbl">Email</span>bsakhileshshetty@gmail.com</div>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/akhilesh-b-s-a11a592b1/" target="_blank">
+            <div class="contact-link-icon">in</div>
+            <div class="contact-link-text"><span class="contact-link-lbl">LinkedIn</span>Akhilesh B S</div>
+          </a>
+          <a class="contact-link" href="https://github.com/BSAkhilesh" target="_blank">
+            <div class="contact-link-icon"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.15c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.75.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.84 2.8 1.3 3.49 1 .1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.28-1.23 3.28-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+            <div class="contact-link-text"><span class="contact-link-lbl">GitHub</span>BS Akhilesh</div>
+          </a>
+          <a class="contact-link" href="https://wa.me/917989591934" target="_blank">
+            <div class="contact-link-icon">📱</div>
+            <div class="contact-link-text"><span class="contact-link-lbl">WhatsApp</span>+91 7989591934</div>
+          </a>
+        </div>
+      </div>
+      <div class="hire-card reveal">
+      <h3>Available for Opportunities</h3>
+
+      <div class="availability">
+        <div class="avail-dot"></div>
+        Open to Full-time Roles
+      </div>
+
+      <p>
+      Looking to contribute as an <strong>XR Simulation / Digital Twin Engineer</strong>, working on real-time systems, interactive platforms, and scalable visualization solutions.
+      </p>
+
+      <a class="hire-btn" href="https://wa.me/917989591934" target="_blank">
+        💬 Contact Me
+      </a>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+          <a href="assets/Akhilesh B S.pdf" target="_blank" class="btn-outline" style="display:inline-block;font-size:.7rem;">⬇ View Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><span>Akhilesh B S</span> · XR Simulation Engineer</p>
+  <p>Building Real-Time Systems &amp; Digital Twin Solutions · © 2026</p>
+</footer>
+
+<!-- UNIFIED LIGHTBOX — handles video, youtube, images and certs -->
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+  <div class="lightbox-close" onclick="closeMedia()">✕</div>
+  <div id="lightbox-content"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
